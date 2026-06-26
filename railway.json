@@ -1,0 +1,8 @@
+{
+  "build": {
+    "buildCommand": "python manage.py collectstatic --noinput"
+  },
+  "deploy": {
+    "startCommand": "python manage.py migrate && gunicorn --bind 0.0.0.0:${PORT:-8000} strantell_site.wsgi:application"
+  }
+}
