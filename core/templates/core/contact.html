@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Contact | Strantell
+{% endblock %}
+
+{% block content %}
+<section class="hero-section page-hero">
+    <div class="container hero-grid">
+        <div class="hero-copy">
+            <p class="eyebrow">Strantell</p>
+            <h1>Start a Project</h1>
+            <p class="subheadline">
+                Start with a focused operational data assessment and turn it into a practical roadmap for dashboards, reporting, and KPI systems.
+            </p>
+            <div class="hero-actions">
+                <a href="mailto:christianscalvo@gmail.com" class="button button-primary">Email Strantell</a>
+                <a href="{% url 'home' %}" class="button button-secondary">Back Home</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="cards three-column">
+                <article class="card">
+                    <h3>Email</h3>
+                    <p>christianscalvo@gmail.com</p>
+                </article>
+                <article class="card">
+                    <h3>Location</h3>
+                    <p>Phoenix, Arizona</p>
+                </article>
+        </div>
+    </div>
+</section>
+{% endblock %}

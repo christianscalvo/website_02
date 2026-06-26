@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="description"
+        content="Strantell builds operational dashboards, KPI systems, and analytics infrastructure for companies that make, move, repair, test, or build things."
+    >
+
+    <title>{% block title %}Strantell{% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static 'core/css/styles.css' %}">
+</head>
+<body>
+    {% include 'includes/navbar.html' %}
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>© 2026 Strantell LLC. Business Intelligence for Operations.</p>
+            <p>Phoenix, Arizona</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,215 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Home | Strantell
+{% endblock %}
+
+{% block content %}
+<section class="hero-section">
+    <div class="container hero-grid">
+        <div class="hero-copy">
+            <p class="eyebrow">Business Intelligence for Operations</p>
+
+            <h1>
+                Clear operational insight for companies that make, move, repair, test, or build things.
+            </h1>
+
+            <p class="subheadline">
+                Strantell helps operations-driven businesses turn scattered spreadsheets,
+                manual reports, and hidden process data into decision-ready dashboards,
+                KPI systems, and performance visibility.
+            </p>
+
+            <div class="hero-actions">
+                <a href="{% url 'contact' %}" class="button button-primary">Request an Assessment</a>
+                <a href="{% url 'services' %}" class="button button-secondary">View Services</a>
+            </div>
+
+            <div class="hero-proof">
+                <span>Production</span>
+                <span>Laboratories</span>
+                <span>Manufacturing</span>
+                <span>Field Service</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+                <section class="section product-showcase" id="dashboard-showcase">
+            <div class="container">
+                <div class="section-heading showcase-heading">
+                    <p class="eyebrow">Sample Deliverable</p>
+                    <h2>Executive dashboards built around operational reality.</h2>
+                    <p class="section-copy">
+                        Strantell dashboards are designed to give leaders a clear view of performance,
+                        bottlenecks, turnaround time, quality issues, and the metrics that drive daily decisions.
+                    </p>
+                </div>
+
+                <div class="dashboard-showcase-card">
+                    <div class="dashboard-showcase-copy">
+                        <p class="showcase-label">Mining Laboratory Operations Intelligence Platform</p>
+                        <h3>Laboratory performance at a glance.</h3>
+                        <p>
+                            This sample dashboard consolidates sample volume, average turnaround time,
+                            SLA compliance, re-run rate, pending samples, date trends, filters, and executive
+                            summary KPIs into one operational view.
+                        </p>
+
+                        <div class="showcase-points">
+                            <span>Total samples and throughput trends</span>
+                            <span>Average turnaround time tracking</span>
+                            <span>SLA compliance monitoring</span>
+                            <span>Re-run rate and quality visibility</span>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-image-wrap">
+                        <img
+                            src="{% static 'core/img/dashboard_01.png' %}"
+                            alt="Mining laboratory executive summary dashboard showing operational KPIs, filters, trend charts, and performance metrics"
+                        >
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+        <section class="section" id="services">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">What We Build</p>
+                    <h2>Business intelligence systems that match how your operation actually works.</h2>
+                </div>
+
+                <div class="cards three-column">
+                    <article class="card">
+                        <div class="card-icon">01</div>
+                        <h3>Operational Dashboards</h3>
+                        <p>
+                            Executive and floor-level dashboards for tracking throughput, turnaround time,
+                            production volume, service capacity, backlog, and operational performance.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-icon">02</div>
+                        <h3>KPI & Reporting Systems</h3>
+                        <p>
+                            Replace fragile manual reporting with structured KPI definitions,
+                            recurring reports, clean data models, and decision-ready metrics.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-icon">03</div>
+                        <h3>Data Process Assessment</h3>
+                        <p>
+                            We map how information moves through your business, identify bottlenecks,
+                            and recommend practical BI improvements before building anything.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section split-section" id="process">
+            <div class="container split-grid">
+                <div>
+                    <p class="eyebrow">Our Process</p>
+                    <h2>We start with the operation, not the dashboard.</h2>
+                    <p class="section-copy">
+                        Useful business intelligence starts by understanding the real workflow:
+                        where work enters, where it slows down, who needs visibility, and which
+                        decisions are being made without reliable data.
+                    </p>
+                </div>
+
+                <div class="process-list">
+                    <div class="process-item">
+                        <span>1</span>
+                        <div>
+                            <h3>Observe the workflow</h3>
+                            <p>Understand the process, teams, handoffs, reports, and operational pain points.</p>
+                        </div>
+                    </div>
+
+                    <div class="process-item">
+                        <span>2</span>
+                        <div>
+                            <h3>Define the metrics</h3>
+                            <p>Clarify what should be measured, why it matters, and who needs to act on it.</p>
+                        </div>
+                    </div>
+
+                    <div class="process-item">
+                        <span>3</span>
+                        <div>
+                            <h3>Build the system</h3>
+                            <p>Create dashboards, data models, reporting workflows, and documentation.</p>
+                        </div>
+                    </div>
+
+                    <div class="process-item">
+                        <span>4</span>
+                        <div>
+                            <h3>Install the habit</h3>
+                            <p>Help teams use the system consistently so reporting turns into better decisions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="industries">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Where Strantell Fits</p>
+                    <h2>Built for businesses with real-world operational complexity.</h2>
+                </div>
+
+                <div class="industry-grid">
+                    <div>Laboratories</div>
+                    <div>Manufacturing</div>
+                    <div>Mining Support</div>
+                    <div>Warehousing</div>
+                    <div>Field Service</div>
+                    <div>Construction</div>
+                    <div>Repair Shops</div>
+                    <div>Logistics</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section" id="contact">
+            <div class="container cta-card">
+                <div>
+                    <p class="eyebrow">Start With Visibility</p>
+                    <h2>Know what is happening in your operation before the problem gets expensive.</h2>
+                    <p>
+                        Strantell can begin with a focused operational data assessment and turn it into a
+                        practical roadmap for dashboards, reporting, and KPI systems.
+                    </p>
+                </div>
+
+                <a href="{% url 'contact' %}" class="button button-primary">
+                    Contact Strantell
+                </a>
+            </div>
+        </section>
+
+
+{% endblock %}
+
+

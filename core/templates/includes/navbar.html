@@ -1,0 +1,17 @@
+{% load static %}
+
+<header class="site-header">
+    <div class="container nav">
+        <a href="{% url 'home' %}" class="brand" aria-label="Strantell homepage">
+            <img src="{% static 'core/img/strantell-logo.png' %}" alt="Strantell logo">
+        </a>
+
+        <nav class="nav-links" aria-label="Main navigation">
+            <a href="{% url 'home' %}#dashboard-showcase">Work</a>
+            <a href="{% url 'services' %}">Services</a>
+            <a href="{% url 'portfolio' %}">Portfolio</a>
+            <a href="{% url 'about' %}">About</a>
+            <a href="{% url 'contact' %}" class="nav-cta">Start a Project</a>
+        </nav>
+    </div>
+</header>
