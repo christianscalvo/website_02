@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
 About | Strantell
@@ -95,56 +96,48 @@ About | Strantell
 </section>
 
 <section class="section">
-    <div class="container split-grid">
+    <div class="container split-grid founder-grid">
         <div>
             <p class="eyebrow">Founder</p>
             <h2>Founded by Christian S. Calvo.</h2>
+
             <p class="section-copy">
                 Strantell was founded by Christian S. Calvo to bring practical business intelligence capability
                 to operations-driven businesses that need better visibility but do not yet have a dedicated analytics
                 department.
             </p>
+
             <p class="section-copy">
                 The company combines industrial operations experience with business intelligence, reporting systems,
                 and technical analytics to deliver practical systems that support real management decisions.
             </p>
         </div>
 
-        <div class="process-list">
-            <div class="process-item">
-                <span>1</span>
-                <div>
-                    <h3>Understand the operation</h3>
-                    <p>Observe workflows, reporting habits, operational constraints, and decision points.</p>
-                </div>
+        <div class="founder-card">
+            <div class="founder-image-wrap">
+                <img src="{% static 'core/img/christianscalvo-headshot_02.jpg' %}"
+                     alt="Christian S. Calvo, Founder of Strantell LLC">
             </div>
 
-            <div class="process-item">
-                <span>2</span>
-                <div>
-                    <h3>Define the right metrics</h3>
-                    <p>Clarify what should be measured, why it matters, and how it should be calculated.</p>
-                </div>
-            </div>
+            <div class="founder-card-copy">
+                <p class="showcase-label">Founder & Principal Consultant</p>
 
-            <div class="process-item">
-                <span>3</span>
-                <div>
-                    <h3>Build with documentation</h3>
-                    <p>Create dashboards, models, validation reports, user guides, and handoff materials.</p>
-                </div>
-            </div>
+                <h3>Christian S. Calvo</h3>
 
-            <div class="process-item">
-                <span>4</span>
-                <div>
-                    <h3>Support the system</h3>
-                    <p>Remain responsive as operations evolve and reporting needs change.</p>
-                </div>
+                <p>
+                    Business intelligence consultant focused on dashboards, KPI systems,
+                    reporting automation, and operational analytics for businesses that need
+                    clearer visibility into performance.
+                </p>
+
+                <a href="/christianscalvo/" class="button button-secondary">
+                    View Digital Business Card
+                </a>
             </div>
         </div>
     </div>
 </section>
+
 
 <section class="cta-section">
     <div class="container cta-card">

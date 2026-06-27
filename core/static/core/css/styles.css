@@ -672,3 +672,65 @@ h1 {
         grid-template-columns: 1fr;
     }
 }
+
+.founder-grid {
+    align-items: center;
+}
+
+.founder-card {
+    overflow: hidden;
+    border-radius: 30px;
+    border: 1px solid rgba(242, 140, 40, 0.30);
+    background:
+        radial-gradient(circle at top right, rgba(242, 140, 40, 0.16), transparent 18rem),
+        rgba(255, 255, 255, 0.06);
+    box-shadow: var(--shadow);
+}
+
+.founder-image-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.founder-image-wrap img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    /* Adjusts the crop so your face stays centered */
+    object-position: 50% 28%;
+}
+
+.founder-card-copy {
+    padding: 1.6rem;
+}
+
+.founder-card-copy h3 {
+    font-size: clamp(1.8rem, 2.6vw, 2.8rem);
+    line-height: 1;
+    letter-spacing: -0.05em;
+    margin-bottom: 1rem;
+}
+
+.founder-card-copy p {
+    color: var(--steel-200);
+    line-height: 1.65;
+}
+
+.founder-card-copy .button {
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 640px) {
+    .founder-image-wrap {
+        aspect-ratio: 1 / 1;
+    }
+
+    .founder-image-wrap img {
+        object-position: 50% 25%;
+    }
+}
