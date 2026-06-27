@@ -1,0 +1,290 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Christian S. Calvo | Digital Business Card{% endblock %}
+
+{% block content %}
+
+<style>
+    .digital-card-grid {
+        align-items: center;
+    }
+
+    .contact-card-header {
+        display: flex;
+        align-items: center;
+        gap: 1.25rem;
+        margin-bottom: 1.8rem;
+    }
+
+    .profile-photo-shell {
+        width: 120px;
+        height: 120px;
+        flex: 0 0 120px;
+        border-radius: 50%;
+        border: 1px solid rgba(242, 140, 40, 0.45);
+        background:
+            radial-gradient(circle at top right, rgba(242, 140, 40, 0.25), transparent 7rem),
+            rgba(255, 255, 255, 0.05);
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+    }
+
+    .profile-photo-shell img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .contact-card-header h3 {
+        margin-bottom: 0.35rem;
+    }
+
+    .contact-card-header p {
+        margin-bottom: 0;
+        color: var(--steel-200);
+        line-height: 1.45;
+    }
+
+    .contact-detail-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.85rem;
+        margin-bottom: 1.4rem;
+    }
+
+    .contact-detail {
+        padding: 0.95rem;
+        border-radius: 18px;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.045);
+    }
+
+    .contact-detail span {
+        display: block;
+        color: var(--accent);
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        font-size: 0.68rem;
+        font-weight: 900;
+        margin-bottom: 0.4rem;
+    }
+
+    .contact-detail a,
+    .contact-detail p {
+        color: var(--white);
+        font-weight: 700;
+        line-height: 1.35;
+        margin-bottom: 0;
+        overflow-wrap: anywhere;
+    }
+
+    .contact-wide {
+        grid-column: span 2;
+    }
+
+    .digital-card-actions {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.75rem;
+        margin-top: 1rem;
+    }
+
+    .digital-card-actions .button {
+        width: 100%;
+        min-height: 46px;
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .qr-note {
+        margin-top: 1rem;
+        color: var(--steel-400);
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    @media (max-width: 980px) {
+        .digital-card-grid {
+            gap: 2rem;
+        }
+    }
+
+    @media (max-width: 640px) {
+        .contact-card-header {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .profile-photo-shell {
+            width: 104px;
+            height: 104px;
+            flex-basis: 104px;
+        }
+
+        .contact-detail-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .contact-wide {
+            grid-column: span 1;
+        }
+
+        .digital-card-actions {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+<section class="hero-section page-hero">
+    <div class="container">
+        <div class="split-grid digital-card-grid">
+
+            <div>
+                <p class="eyebrow">Digital Business Card</p>
+
+                <h1>
+                    Christian S. Calvo
+                </h1>
+
+                <p class="subheadline">
+                    Business Intelligence Consultant<br>
+                    Strantell LLC
+                </p>
+
+                <div class="hero-actions">
+                    <a class="button button-primary" href="mailto:christianscalvo@strantell.com">
+                        Email Me
+                    </a>
+
+                    <a class="button button-secondary" href="{% url 'contact' %}">
+                        Start a Conversation
+                    </a>
+                </div>
+
+                <div class="hero-proof">
+                    <span>Business Intelligence</span>
+                    <span>Power BI</span>
+                    <span>Operations Analytics</span>
+                </div>
+            </div>
+
+            <div class="statement-card">
+
+                <div class="contact-card-header">
+                    <div class="profile-photo-shell">
+                        <img src="{% static 'core/img/fake-headshot.jpg' %}"
+                             alt="Christian S. Calvo"
+                             onerror="this.style.display='none'; this.parentElement.innerHTML='<span style=&quot;font-size:2.4rem;font-weight:900;color:#f28c28;&quot;>CC</span>';">
+                    </div>
+
+                    <div>
+                        <h3>Contact Card</h3>
+                        <p>
+                            Scan, save, or reach out directly.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="contact-detail-grid">
+
+                    <div class="contact-detail contact-wide">
+                        <span>Email</span>
+                        <a href="mailto:christianscalvo@strantell.com">
+                            christianscalvo@strantell.com
+                        </a>
+                    </div>
+
+                    <div class="contact-detail">
+                        <span>Phone</span>
+                        <a href="tel:+15206607884">
+                            (520) 660-7884
+                        </a>
+                    </div>
+
+                    <div class="contact-detail">
+                        <span>Location</span>
+                        <p>Phoenix, Arizona</p>
+                    </div>
+
+                    <div class="contact-detail">
+                        <span>Company</span>
+                        <p>Strantell LLC</p>
+                    </div>
+
+                    <div class="contact-detail">
+                        <span>Website</span>
+                        <a href="https://www.strantell.com">
+                            strantell.com
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="digital-card-actions">
+                    <a class="button button-primary" href="tel:+15206607884">
+                        Call
+                    </a>
+
+                    <a class="button button-secondary" href="https://www.strantell.com">
+                        Visit Website
+                    </a>
+                </div>
+                
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+
+        <div class="section-heading">
+            <p class="eyebrow">Quick Links</p>
+
+            <h2>
+                Learn more about Strantell.
+            </h2>
+
+            <p class="section-copy">
+                Business intelligence consulting for companies that need clearer reporting,
+                better dashboards, and practical operational visibility.
+            </p>
+        </div>
+
+        <div class="cards three-column">
+
+            <a class="card" href="{% url 'services' %}">
+                <div class="card-icon">01</div>
+                <h3>Services</h3>
+                <p>
+                    See the dashboard, KPI, and reporting services Strantell provides.
+                </p>
+            </a>
+
+            <a class="card" href="{% url 'portfolio' %}">
+                <div class="card-icon">02</div>
+                <h3>Portfolio</h3>
+                <p>
+                    View example analytics projects and business intelligence case studies.
+                </p>
+            </a>
+
+            <a class="card" href="{% url 'contact' %}">
+                <div class="card-icon">03</div>
+                <h3>Contact</h3>
+                <p>
+                    Send a message about a reporting, dashboard, or data visibility problem.
+                </p>
+            </a>
+
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}

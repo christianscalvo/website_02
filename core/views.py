@@ -19,3 +19,7 @@ def about(request):
 
 def contact(request):
     return render(request, "core/contact.html")
+
+
+def christianscalvo(request):
+    return render(request, "core/christianscalvo.html")
