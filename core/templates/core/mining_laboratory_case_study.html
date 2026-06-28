@@ -1,0 +1,300 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Mining Laboratory Case Study | Strantell
+{% endblock %}
+
+{% block content %}
+<section class="hero-section page-hero">
+    <div class="container hero-grid">
+        <div class="hero-copy">
+            <p class="eyebrow">Synthetic Portfolio Case Study</p>
+            <h1>Mining Laboratory Operations Intelligence Platform</h1>
+            <p class="subheadline">
+                A complete business intelligence workflow for a production-support mining laboratory:
+                kickoff documentation, data preparation, star schema modeling, Power BI KPI development,
+                weekly project reporting, and executive findings.
+            </p>
+
+            <div class="hero-actions">
+                <a href="{% static 'core/docs/portfolio/mining-laboratory/mining-lab-executive-report.pdf' %}" class="button button-primary" target="_blank">
+                    View Executive Report
+                </a>
+                <a href="#project-documents" class="button button-secondary">
+                    View Project Documents
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <img
+            src="{% static 'core/img/dashboard_01.png' %}"
+            alt="Mining laboratory Power BI executive dashboard"
+            class="case-study-hero-image"
+        >
+    </div>
+</section>
+
+<section class="section">
+    <div class="container narrow">
+        <p class="eyebrow">Business Problem</p>
+        <h2>Manual reporting limited operational visibility.</h2>
+        <p>
+            The laboratory relied on manually reviewed sample records, spreadsheet-based reporting,
+            and informal operational visibility. As sample volume increased, leadership had limited ability
+            to identify turnaround issues, monitor SLA compliance, track re-runs, or understand whether
+            delays were concentrated by department, instrument, sample type, technician, or area.
+        </p>
+
+        <div class="cards three-column">
+            <article class="card">
+                <h3>Manual Reporting</h3>
+                <p>Managers spent time reviewing records instead of interpreting operational performance.</p>
+            </article>
+
+            <article class="card">
+                <h3>Limited KPI Visibility</h3>
+                <p>SLA compliance, turnaround time, and re-run activity were difficult to monitor consistently.</p>
+            </article>
+
+            <article class="card">
+                <h3>Hidden Bottlenecks</h3>
+                <p>Operational delays were hard to isolate by instrument, department, area, or sample type.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <div class="build-section-header">
+            <p class="eyebrow">What Strantell Built</p>
+            <h2>A complete BI workflow from raw data to executive findings.</h2>
+            <p>
+                This case study demonstrates the full delivery path of an operations analytics engagement:
+                clean the data, model it properly, build the dashboard, and translate the findings into management action.
+            </p>
+        </div>
+
+        <div class="build-workflow">
+            <article class="build-step">
+                <span>01</span>
+                <div>
+                    <h3>Data Preparation</h3>
+                    <p>Cleaned laboratory sample records, timestamps, SLA rules, priorities, statuses, and categories.</p>
+                </div>
+            </article>
+
+            <article class="build-step">
+                <span>02</span>
+                <div>
+                    <h3>Analytical Model</h3>
+                    <p>Built a star schema with fact and dimension tables for reliable Power BI reporting.</p>
+                </div>
+            </article>
+
+            <article class="build-step">
+                <span>03</span>
+                <div>
+                    <h3>Executive Dashboard</h3>
+                    <p>Created KPI cards, filters, trend views, SLA visuals, and bottleneck analysis views.</p>
+                </div>
+            </article>
+
+            <article class="build-step">
+                <span>04</span>
+                <div>
+                    <h3>Management Reporting</h3>
+                    <p>Prepared kickoff, weekly progress, and executive findings documents for a realistic engagement.</p>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="section">
+    <div class="container narrow">
+        <p class="eyebrow">Dashboard</p>
+        <h2>Executive Summary View</h2>
+        <p>
+            The dashboard gives leadership a single view of sample volume, turnaround time,
+            SLA performance, re-run activity, late samples, lab health, and lateness severity.
+            Filters allow users to review performance by date, area, department, sample type,
+            status, and technician.
+        </p>
+
+        <div class="metric-grid">
+            <div class="metric-card">
+                <span>916</span>
+                <p>Total Samples</p>
+            </div>
+            <div class="metric-card">
+                <span>3.19</span>
+                <p>Avg TAT Hours</p>
+            </div>
+            <div class="metric-card">
+                <span>86.35%</span>
+                <p>SLA Compliance</p>
+            </div>
+            <div class="metric-card">
+                <span>125</span>
+                <p>Late Samples</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container narrow">
+        <p class="eyebrow">Key Findings</p>
+        <h2>The operational story behind the dashboard.</h2>
+
+        <div class="insight-list">
+            <article class="insight-item">
+                <h3>1. Volume was normal, but performance weakened.</h3>
+                <p>
+                    May received 916 samples against a normalized YTD expectation of 908.04,
+                    meaning workload was essentially flat. Despite that, average turnaround increased
+                    8.88%, SLA compliance declined 1.01 percentage points, and late samples increased 8.98%.
+                </p>
+            </article>
+
+            <article class="insight-item">
+                <h3>2. The issue was not rush demand or rework.</h3>
+                <p>
+                    Rush samples and re-run samples were effectively flat against normalized YTD expectations,
+                    making demand mix an unlikely explanation.
+                </p>
+            </article>
+
+            <article class="insight-item">
+                <h3>3. XRF-supported workflows were the strongest bottleneck signal.</h3>
+                <p>
+                    XRF-1 and XRF-2 handled approximately 62% of May volume and both experienced
+                    double-digit increases in average turnaround.
+                </p>
+            </article>
+
+            <article class="insight-item">
+                <h3>4. Smelter concentration amplified the impact.</h3>
+                <p>
+                    The Smelter department handled nearly 58% of May volume and degraded across
+                    turnaround, SLA compliance, and late sample count.
+                </p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="project-documents">
+    <div class="container">
+        <p class="eyebrow">Deliverables</p>
+        <h2>Project Documents</h2>
+        <p>
+            These documents demonstrate the full engagement lifecycle: kickoff, progress communication,
+            and executive findings.
+        </p>
+
+        <div class="cards three-column document-card-grid">
+            <article class="card document-card">
+                <div>
+                    <p class="document-type">PDF Document</p>
+                    <h3>Client Kickoff Document</h3>
+                    <p>
+                        Defines the problem, objectives, scope, deliverables, risks, assumptions,
+                        schedule, responsibilities, and communication plan.
+                    </p>
+                </div>
+
+                <a href="{% static 'core/docs/portfolio/mining-laboratory/mining-lab-client-kickoff.pdf' %}"
+                   class="doc-button"
+                   target="_blank"
+                   rel="noopener">
+                    Open PDF <span>→</span>
+                </a>
+            </article>
+
+            <article class="card document-card">
+                <div>
+                    <p class="document-type">PDF Document</p>
+                    <h3>Weekly Progress Report</h3>
+                    <p>
+                        Shows completed work, project status, blockers, decisions needed, planned next
+                        work, and hours.
+                    </p>
+                </div>
+
+                <a href="{% static 'core/docs/portfolio/mining-laboratory/mining-lab-weekly-progress-report.pdf' %}"
+                   class="doc-button"
+                   target="_blank"
+                   rel="noopener">
+                    Open PDF <span>→</span>
+                </a>
+            </article>
+
+            <article class="card document-card">
+                <div>
+                    <p class="document-type">PDF Document</p>
+                    <h3>Executive Findings Report</h3>
+                    <p>
+                        Summarizes KPI movement, bottleneck signals, operational risks, root cause
+                        hypotheses, and recommended actions.
+                    </p>
+                </div>
+
+                <a href="{% static 'core/docs/portfolio/mining-laboratory/mining-lab-executive-report.pdf' %}"
+                   class="doc-button"
+                   target="_blank"
+                   rel="noopener">
+                    Open PDF <span>→</span>
+                </a>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container narrow">
+        <p class="eyebrow">Process</p>
+        <h2>A repeatable engagement model.</h2>
+
+        <ol class="process-list">
+            <li>Discovery and kickoff</li>
+            <li>Data cleanup and validation</li>
+            <li>Star schema modeling</li>
+            <li>KPI definition</li>
+            <li>Dashboard development</li>
+            <li>Findings synthesis</li>
+            <li>Executive reporting and handoff</li>
+        </ol>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container narrow">
+        <p class="eyebrow">Demonstrated Value</p>
+        <h2>From raw records to management-ready visibility.</h2>
+        <p>
+            This case study demonstrates how an operations-heavy business can move from scattered
+            sample records to a structured management reporting system. The final deliverables provide
+            leadership with visibility into workload, turnaround performance, SLA compliance, re-runs,
+            late samples, bottleneck signals, and follow-up actions.
+        </p>
+
+        <div class="hero-actions">
+            <a href="/contact/" class="button button-primary">
+                Request an Assessment
+            </a>
+            <a href="/services/" class="button button-secondary">
+                View Services
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}

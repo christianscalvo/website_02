@@ -32,9 +32,10 @@ body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     background:
-        radial-gradient(circle at top left, rgba(242, 140, 40, 0.18), transparent 34rem),
-        radial-gradient(circle at top right, rgba(201, 104, 20, 0.14), transparent 30rem),
-        var(--navy-950);
+        radial-gradient(circle at 18% 8%, rgba(242, 140, 40, 0.22), transparent 28rem),
+        radial-gradient(circle at 82% 12%, rgba(20, 92, 140, 0.20), transparent 32rem),
+        radial-gradient(circle at 50% 48%, rgba(255, 255, 255, 0.045), transparent 38rem),
+        linear-gradient(180deg, #07111f 0%, #030914 52%, #07111f 100%);
     color: var(--white);
 }
 
@@ -44,10 +45,17 @@ body::before {
     inset: 0;
     pointer-events: none;
     background-image:
-        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+        linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
     background-size: 48px 48px;
-    mask-image: linear-gradient(to bottom, black, transparent 85%);
+    mask-image: linear-gradient(to bottom, black, rgba(0,0,0,0.75) 55%, transparent 95%);
+}
+
+.section-alt,
+.split-section {
+    background:
+        radial-gradient(circle at top right, rgba(242, 140, 40, 0.075), transparent 24rem),
+        rgba(255, 255, 255, 0.035);
 }
 
 a {
@@ -64,9 +72,9 @@ a {
     position: sticky;
     top: 0;
     z-index: 50;
-    background: rgba(3, 9, 20, 0.82);
-    backdrop-filter: blur(16px);
-    border-bottom: 1px solid var(--line);
+    background: rgba(3, 9, 20, 0.88);
+    backdrop-filter: blur(18px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.16);
 }
 
 .nav {
@@ -263,8 +271,9 @@ h1 {
     min-height: 280px;
     padding: 1.5rem;
     border-radius: 24px;
-    border: 1px solid var(--line);
-    background: var(--card);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.085), rgba(255, 255, 255, 0.035));
 }
 
 .card-icon {
@@ -733,4 +742,322 @@ h1 {
     .founder-image-wrap img {
         object-position: 50% 25%;
     }
+}
+
+
+.portfolio-card-image {
+    width: 100%;
+    border-radius: 14px;
+    margin-bottom: 1.25rem;
+    border: 1px solid rgba(15, 38, 64, 0.12);
+    box-shadow: 0 12px 30px rgba(15, 38, 64, 0.10);
+}
+
+.case-study-hero-image {
+    width: 100%;
+    border-radius: 18px;
+    border: 1px solid rgba(15, 38, 64, 0.12);
+    box-shadow: 0 18px 45px rgba(15, 38, 64, 0.16);
+}
+
+.metric-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.metric-card {
+    padding: 1.5rem;
+    border-radius: 16px;
+    background: #ffffff;
+    border: 1px solid rgba(15, 38, 64, 0.10);
+    box-shadow: 0 10px 25px rgba(15, 38, 64, 0.08);
+}
+
+.metric-card span {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0f2640;
+    margin-bottom: 0.35rem;
+}
+
+.metric-card p {
+    margin: 0;
+    color: #5f6f7f;
+}
+
+.insight-list {
+    display: grid;
+    gap: 1.25rem;
+    margin-top: 2rem;
+}
+
+.insight-list {
+    display: grid;
+    gap: 1.25rem;
+    margin-top: 2rem;
+}
+
+.insight-item {
+    padding: 1.5rem;
+    border-radius: 16px;
+    background:
+        linear-gradient(135deg, #ffffff, #f3f7fb);
+    border-left: 5px solid var(--accent);
+    box-shadow: 0 10px 25px rgba(15, 38, 64, 0.12);
+    color: #0f2640;
+}
+
+.insight-item h3 {
+    margin-top: 0;
+    color: #0f2640;
+}
+
+.insight-item p {
+    color: #4d5f70;
+    line-height: 1.65;
+    margin-bottom: 0;
+}
+
+.process-list li {
+    color: #0f2640;
+}
+
+.process-list li::marker {
+    color: var(--accent);
+    font-weight: 800;
+}
+
+@media (max-width: 900px) {
+    .metric-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .metric-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Case study process list */
+ol.process-list {
+    display: grid;
+    gap: 0.85rem;
+    margin-top: 1.5rem;
+    padding-left: 1.4rem;
+}
+
+ol.process-list li {
+    color: var(--steel-100);
+    background: rgba(255, 255, 255, 0.055);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 0.95rem 1rem;
+    line-height: 1.5;
+    font-weight: 700;
+}
+
+ol.process-list li::marker {
+    color: var(--accent);
+    font-weight: 900;
+}
+
+
+.build-section-header {
+    max-width: 860px;
+    margin-bottom: 2rem;
+}
+
+.build-section-header h2 {
+    font-size: clamp(2rem, 3.2vw, 3.4rem);
+    line-height: 1;
+    letter-spacing: -0.055em;
+    margin-bottom: 1rem;
+}
+
+.build-section-header p:not(.eyebrow) {
+    color: var(--steel-200);
+    line-height: 1.65;
+    max-width: 760px;
+}
+
+.build-workflow {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.build-step {
+    display: grid;
+    grid-template-columns: 52px 1fr;
+    gap: 1rem;
+    align-items: start;
+    padding: 1.25rem;
+    border-radius: 20px;
+    border: 1px solid var(--line);
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.025));
+}
+
+.build-step span {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--accent);
+    color: var(--navy-950);
+    font-weight: 900;
+    font-size: 0.9rem;
+}
+
+.build-step h3 {
+    margin-bottom: 0.35rem;
+    font-size: 1.15rem;
+}
+
+.build-step p {
+    color: var(--steel-200);
+    line-height: 1.55;
+    margin-bottom: 0;
+}
+
+@media (max-width: 800px) {
+    .build-workflow {
+        grid-template-columns: 1fr;
+    }
+}
+
+.document-card-grid {
+    align-items: stretch;
+}
+
+.document-card {
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.4rem;
+    transition:
+        transform 180ms ease,
+        border-color 180ms ease,
+        background 180ms ease,
+        box-shadow 180ms ease;
+}
+
+.document-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(242, 140, 40, 0.48);
+    background:
+        radial-gradient(circle at top right, rgba(242, 140, 40, 0.13), transparent 16rem),
+        rgba(255, 255, 255, 0.075);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
+}
+
+.document-type {
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-weight: 900;
+    font-size: 0.72rem;
+    margin-bottom: 0.8rem;
+}
+
+.doc-button {
+    width: fit-content;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.75rem 1rem;
+    border-radius: 999px;
+    color: var(--navy-950);
+    background: linear-gradient(135deg, var(--accent), var(--accent-soft));
+    font-weight: 900;
+    font-size: 0.9rem;
+    box-shadow: 0 12px 28px rgba(242, 140, 40, 0.22);
+    transition:
+        transform 180ms ease,
+        box-shadow 180ms ease,
+        gap 180ms ease;
+}
+
+.doc-button:hover {
+    transform: translateY(-2px);
+    gap: 0.65rem;
+    box-shadow: 0 16px 36px rgba(242, 140, 40, 0.32);
+}
+
+.doc-button span {
+    font-size: 1rem;
+    line-height: 1;
+}
+
+
+
+/* Portfolio card buttons */
+.portfolio-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.25rem;
+    transition:
+        transform 180ms ease,
+        border-color 180ms ease,
+        background 180ms ease,
+        box-shadow 180ms ease;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(242, 140, 40, 0.48);
+    background:
+        radial-gradient(circle at top right, rgba(242, 140, 40, 0.13), transparent 16rem),
+        rgba(255, 255, 255, 0.075);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
+}
+
+.portfolio-button {
+    width: fit-content;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    margin-top: 1.25rem;
+    padding: 0.75rem 1rem;
+    border-radius: 999px;
+    color: var(--navy-950);
+    background: linear-gradient(135deg, var(--accent), var(--accent-soft));
+    font-weight: 900;
+    font-size: 0.9rem;
+    box-shadow: 0 12px 28px rgba(242, 140, 40, 0.22);
+    transition:
+        transform 180ms ease,
+        box-shadow 180ms ease,
+        gap 180ms ease;
+}
+
+.portfolio-button:hover {
+    transform: translateY(-2px);
+    gap: 0.65rem;
+    box-shadow: 0 16px 36px rgba(242, 140, 40, 0.32);
+}
+
+.portfolio-button span {
+    font-size: 1rem;
+    line-height: 1;
+}
+
+.portfolio-button-secondary {
+    color: var(--white);
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(242, 140, 40, 0.45);
+    box-shadow: none;
+}
+
+.portfolio-button-secondary:hover {
+    background: rgba(242, 140, 40, 0.12);
+    box-shadow: 0 16px 36px rgba(242, 140, 40, 0.16);
 }

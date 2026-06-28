@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
 Portfolio | Strantell
@@ -8,10 +9,11 @@ Portfolio | Strantell
 <section class="hero-section page-hero">
     <div class="container hero-grid">
         <div class="hero-copy">
-            <p class="eyebrow">Strantell</p>
-            <h1>Portfolio</h1>
+            <p class="eyebrow">Strantell Portfolio</p>
+            <h1>Operational analytics case studies.</h1>
             <p class="subheadline">
-                Sample work and project-style deliverables for operational analytics engagements.
+                Project-style deliverables showing how Strantell turns raw operational data,
+                unclear KPI tracking, and manual reporting into structured business intelligence systems.
             </p>
         </div>
     </div>
@@ -19,15 +21,48 @@ Portfolio | Strantell
 
 <section class="section">
     <div class="container">
+        <div class="section-header">
+            <p class="eyebrow">Case Studies</p>
+            <h2>Selected Work</h2>
+            <p>
+                Synthetic portfolio case studies built to demonstrate Strantell's consulting process,
+                dashboard development, analytical modeling, and executive reporting standards.
+            </p>
+        </div>
+
         <div class="cards three-column">
-                <article class="card">
-                    <h3>Mining Laboratory Dashboard</h3>
-                    <p>Sample executive dashboard for laboratory turnaround time, SLA compliance, re-run rate, and pending sample visibility.</p>
-                </article>
-                <article class="card">
-                    <h3>Consulting Documentation System</h3>
-                    <p>Reusable kickoff, weekly progress, technical findings, and closeout report templates for structured client engagements.</p>
-                </article>
+            <article class="card portfolio-card">
+                <img
+                    src="{% static 'core/img/dashboard_01.png' %}"
+                    alt="Mining laboratory Power BI executive dashboard"
+                    class="portfolio-card-image"
+                >
+
+                <h3>Mining Laboratory Operations Intelligence Platform</h3>
+
+                <p>
+                    A full operational analytics case study for a production-support mining laboratory,
+                    including kickoff documentation, data modeling, Power BI dashboarding, progress reporting,
+                    and executive findings.
+                </p>
+
+                <a href="/portfolio/mining-laboratory/" class="portfolio-button">
+                    View Case Study <span>→</span>
+                </a>
+            </article>
+
+            <article class="card portfolio-card">
+                <h3>Consulting Documentation System</h3>
+
+                <p>
+                    Reusable kickoff, weekly progress, technical findings, executive report, and closeout
+                    templates for structured BI consulting engagements.
+                </p>
+
+            <a href="/services/" class="portfolio-button portfolio-button-secondary">
+                View Services <span>→</span>
+            </a>
+            </article>
         </div>
     </div>
 </section>

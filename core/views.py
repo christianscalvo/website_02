@@ -12,6 +12,9 @@ def services(request):
 def portfolio(request):
     return render(request, "core/portfolio.html")
 
+def mining_laboratory_case_study(request):
+    return render(request, "core/mining_laboratory_case_study.html")
+
 
 def about(request):
     return render(request, "core/about.html")
