@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2048" height="2048" viewBox="0 0 2048 2048" role="img" aria-labelledby="title desc">
+  <title id="title">Strantell Logo</title>
+  <desc id="desc">Geometric Strantell mark in dark navy, industrial orange, and steel gray on a transparent background.</desc>
+  <defs>
+    <style>
+      .navy { fill: #0B1F33; }
+      .orange { fill: #E56A1A; }
+      .steel { fill: #5F6B7A; }
+    </style>
+  </defs>
+  <g shape-rendering="geometricPrecision">
+    <polygon class="navy" points="1678,614 1023,205 369,614 369,994 545,1093 545,727 1022,430 1679,834"/>
+    <polygon class="navy" points="368,1218 370,1434 1023,1842 1023,1617 575,1339"/>
+    <polygon class="orange" points="839,787 1312,1050 1311,849 1021,677"/>
+    <polygon class="steel" points="1313,851 1313,1050 1502,1156 1502,1320 1024,1618 1024,1842 1678,1433 1678,1050"/>
+    <polygon class="steel" points="736,982 736,1198 1021,1370 1226,1249"/>
+  </g>
+</svg>

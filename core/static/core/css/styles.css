@@ -90,11 +90,12 @@ a {
     align-items: center;
 }
 
-.brand img {
-    height: 54px;
+.brand-logo {
+    height: 56px;
     width: auto;
     display: block;
 }
+
 
 .nav-links {
     display: flex;
